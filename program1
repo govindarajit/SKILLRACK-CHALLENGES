@@ -1,0 +1,45 @@
+/*
+The program must accept an integer N as input. The program must print each digit of N in words as the output.
+*/
+
+
+
+public class Challenge1_1_19 {
+
+	public static final String[] units = { "zero", "one", "two", "three", "four",
+			"five", "six", "seven", "eight", "nine"};
+public static String convert(final int n) {
+		
+
+		if (n < 20) {
+			return units[n];
+		}
+		return null;
+	}
+		
+
+	public static void main(final String[] args) {
+
+		int n,r=0;
+
+		n =2345;
+		int n1=n,count=0;
+		while(n1!=0){
+			count++;
+			n1/=10;
+		}
+		int[] a=new int[count];
+		
+		for(int i=0;i<count;i++)
+		{
+			 r=n%10;
+			 a[i]=r;
+			 n/=10;
+		} for(int i=count-1;i>=0;i--)
+		{
+			 System.out.print (    convert(a[i]) + " ");
+				
+		} 
+			
+	}
+}
